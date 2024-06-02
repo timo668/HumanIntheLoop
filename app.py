@@ -12,7 +12,7 @@ def Get_samemeaning_info(keyword):
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo-0125",
         messages=[
-            {"role": "system", "content": "Give a brief description of why the following keywords have the same meaning and suggest the best one. Maximum 1 sentence."},
+            {"role": "system", "content": "Geef een korte beschrijving waarom de volgende keywoorden de zelfde betekenis hebben en geef een sugesstie voor de beste. Maximaal 1 zin."},
             {"role": "user", "content": keyword}
         ]
     )
@@ -28,7 +28,7 @@ def Get_clear_info(keyword):
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo-0125",
         messages=[
-            {"role": "system", "content": "Give a brief description of why the following keyword is unclear. Maximum 1 sentence."},
+            {"role": "system", "content": "Geef een korte beschrijving waarom de volgende keywoord onduidelijk is. Maximaal 1 zin."},
             {"role": "user", "content": keyword}
         ]
     )
